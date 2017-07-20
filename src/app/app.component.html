@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
   <!-- <nav>
@@ -33,14 +34,16 @@
   <div class="responsive-nav-sidebar responsive-nav-animate-left" style="display:none" id="mySidebar">
     <button id="responsiveNavClose" class="responsive-nav-bar-item responsive-nav-button"(click)="closeSidebar()">Close &times;</button>
     <a routerLink="/home" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Home</a>
-    <a routerLink="/channels" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Channels</a>
-    <a routerLink="/members-page" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Members</a>
+    <a routerLink="" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Channels</a>
+    <a routerLink="" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Members</a>
     <a routerLink="" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Other</a>
   </div>
 
   <div zclass="w3-main" id="main">
     <div class="w3-teal">
-      <button id="responsiveNavHamburgerButton" class="responsive-nav-button w3-teal w3-xlarge" (click)="openSidebar()">&#9776;</button>
+      <a href="#" class="btn btn-info btn-lg" id="responsiveNavHamburgerButton">
+        <span class="glyphicon glyphicon-menu-hamburger" (click)="openSidebar()"></span> Menu-hamburger
+      </a>
     </div>
   </div>
   <router-outlet></router-outlet>

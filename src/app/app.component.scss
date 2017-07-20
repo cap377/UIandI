@@ -5,7 +5,7 @@ html, body {
 
 #responsiveNavHamburgerButton{
   border: none;
-  background-color: transparent;
+  background-color: black;
   color: white;
   position: fixed;
   top: 0px;
@@ -72,21 +72,3 @@ html, body {
 }
 @media (min-width: 481px){}
 @media (min-width: 1024px){}
-
-// position: fixed;
-// top: 0;
-// left: 0;
-// width: 100%;
-// padding-top: 10px;
-// padding-bottom: 10px;
-// text-align: center;
-// background: gray;
-// font-weight: bold;
-// text-transform: uppercase;
-// ul {
-//   padding-left: 0;
-//   list-style: none;
-// }
-// li {
-//   display: inline-block;
-// }
