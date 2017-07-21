@@ -70,6 +70,7 @@ export class UserProfilesComponent implements OnInit {
      }
      else{
        this.selectedUser = user;
+       //setTimeout
        this.selectedIndex = index;
       //  this.menuState = 'up';
      }
