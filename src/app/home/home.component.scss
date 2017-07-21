@@ -26,7 +26,32 @@ $secondary-text: #000000;
     padding: 5px;
     margin: 0;
     top: 50%;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+.home-timeline-img {
+  position: relative;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  h4 {
+    text-align: center;
+    color: white;
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    top: 50%;
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
   }
 }
+@media (max-width: 720px) {
+  .home-timeline-img {
+    display: none;
+  }
+}
+@media (min-width: 721px) {}
+@media (min-width: 1024px) {}

@@ -14,35 +14,35 @@
 <!--Modal to create posts-->
 <div *ngIf="modalContainer" class="forum-modal-container">
   <div class="row post-name-container">
-    <div class="post-name-label col-xs-4">
+    <div class="post-name-label col-xs-3">
       Name:
     </div>
-    <div class="post-name-input-container col-xs-8">
+    <div class="post-name-input-container col-xs-9">
       <input class="post-name-input" type="text" name="name" id="name" />
     </div>
   </div>
 
-  <div>
-    <div class="post-name-label col-xs-4">
-      Name:
+  <div class="row post-response-container">
+    <div class="post-response-label col-xs-3">
+      {{postType}}:
     </div>
-    <div class="post-response-input-container">
+    <div class="post-response-input-container col-xs-9">
       <textarea class="post-response-input">{{response}}</textarea>
     </div>
   </div>
   <!--cancel and accept buttons-->
-  <div class="row">
+  <div class="row post-button-container">
     <div class="post-input-cancel-button-container col-xs-4">
       <button (click)="closePostInputModal()">
-        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancel
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
     </div>
     <div class="col-xs-4">
 
     </div>
-    <div class="post-input-cancel-button-container col-xs-4">
+    <div class="post-input-accept-button-container col-xs-4">
       <button (click)="createPostFunction()">
-        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Accept
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
       </button>
     </div>
   </div>
