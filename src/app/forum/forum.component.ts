@@ -14,6 +14,11 @@ export class ForumComponent implements OnInit {
   name:string;
   response: string;
 
+  //used to display label for response in modal
+  postType: string;
+
+  currentReplyIndex:number;
+
   createPostFunction;
 
   modalContainer:boolean = false;
@@ -23,11 +28,30 @@ export class ForumComponent implements OnInit {
   }
   addQuestionPost()
   {
+    let tempName = this.name;
+    let tempResponse = this.response;
+    let curTime = new Date();
+    //alert(curTime);
+    //let tempTimeStamp =
+    this.questionList.push({
+      name : tempName,
+      response : tempResponse,
+      replies : [],
+      timeStamp : curTime
+    });
+    this.modalContainer = false;
+  }
+  addReplyPost()
+  {
 
   }
   getReplyPostInformation(i: number)
   {
 
+    this.currentReplyIndex = i;
+    this.postType = "Question";
+    this.createPostFunction = this.addReplyPost;
+    this.modalContainer = true;
   }
   closePostInputModal()
   {
@@ -37,16 +61,9 @@ export class ForumComponent implements OnInit {
   }
   getQuestionPostInformation()
   {
+    this.postType = "Question";
     this.createPostFunction = this.addQuestionPost;
     this.modalContainer = true;
   }
 
-  // createQuestionPost()
-  // {
-  //   questionListHtml += `
-  //     <div class="row">
-  //
-  //     </div>
-  //   `;
-  // }
 }
