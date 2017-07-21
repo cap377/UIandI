@@ -8,8 +8,57 @@
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   </div>
 </div> -->
+<!-- <div [innerHtml]="questionListHtml">
 
-<button class="add-post-btn">
-  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</div> -->
+<!--Modal to create posts-->
+<div *ngIf="modalContainer" class="forum-modal-container">
+  <div class="row">
+    <div class="post-name-input-label col-xs-4">
+      Name:
+    </div>
+    <div class="post-name-input-container col-xs-8">
+      <input type="text" name="name" id="name" />
+    </div>
+  </div>
 
-</button>
+  <div class="post-response-input-container">
+    <textarea>{{response}}</textarea>
+  </div>
+
+  <!--cancel and accept buttons-->
+  <div class="row">
+    <div class="post-input-cancel-button-container col-xs-4">
+      <button (click)="closePostInputModal()">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancel
+      </button>
+    </div>
+    <div class="col-xs-4">
+
+    </div>
+    <div class="post-input-cancel-button-container col-xs-4">
+      <button (click)="createPostFunction()">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Accept
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="question-message-list-container" *ngFor="let question of questionList; let i = index">
+  <div class="row">
+    <div class="question-post-container">
+      <!-- <app-post></app-post> -->
+    </div>
+  </div>
+
+  <div class="add-reply-post-btn-container">
+    <button (click)="getReplyPostInformation(i)">
+    </button>
+  </div>
+</div>
+
+<div class="add-question-post-btn">
+  <button class="add-question-post-btn" (click)="getQuestionPostInformation()">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </button>
+</div>

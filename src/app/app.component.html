@@ -1,51 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
-  <!-- <nav>
-    <ul>
-      <li>
-        <a routerLink="/home" href="">
-          Home
-        </a>
-      </li>
-      <li>
-        <a routerLink="" href="">
-          About Us
-        </a>
-      </li>
-      <li>
-        <a routerLink="" href="">
-          Forums
-        </a>
-      </li>
-    </ul>
-  </nav> -->
-  <!-- <div class="app-title-bar">
-    <div id="app-title-bar-title">ACE</div>
-    <div id="app-title-bar-subheading"></div>
-  </div> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- <nav>
+  <ul>
+    <li>
+      <a routerLink="/home" href="">
+        Home
+      </a>
+    </li>
+    <li>
+      <a routerLink="" href="">
+        About Us
+      </a>
+    </li>
+    <li>
+      <a routerLink="" href="">
+        Forums
+      </a>
+    </li>
+  </ul>
+</nav> -->
+<!-- <div class="app-title-bar">
+  <div id="app-title-bar-title">ACE</div>
+  <div id="app-title-bar-subheading"></div>
+</div> -->
 
 <!-- WILL CODE -->
 
-  <div class="responsive-nav-sidebar responsive-nav-animate-left" style="display:none" id="mySidebar">
-    <button id="responsiveNavClose" class="responsive-nav-bar-item responsive-nav-button"(click)="closeSidebar()">Close &times;</button>
-    <a routerLink="/home" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Home</a>
-    <a routerLink="" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Channels</a>
-    <a routerLink="" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Members</a>
-    <a routerLink="" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Other</a>
-  </div>
+<div class="responsive-nav-sidebar responsive-nav-animate-left" style="display:none" id="mySidebar">
+  <button id="responsiveNavClose" class="responsive-nav-bar-item responsive-nav-button"(click)="closeSidebar()">Close &times;</button>
+  <a routerLink="/home" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Home</a>
+  <a routerLink="" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Channels</a>
+  <a routerLink="" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Members</a>
+  <a routerLink="" class="responsive-nav-bar-item responsive-nav-button" (click)="closeSidebar()">Other</a>
+</div>
 
-  <div zclass="w3-main" id="main">
-    <div class="w3-teal">
-      <a href="#" class="btn btn-info btn-lg" id="responsiveNavHamburgerButton">
-        <span class="glyphicon glyphicon-menu-hamburger" (click)="openSidebar()"></span> Menu-hamburger
-      </a>
-    </div>
+<div zclass="w3-main" id="main">
+  <div class="w3-teal">
+    <a href="#" class="btn btn-info btn-lg" id="responsiveNavHamburgerButton">
+      <span class="glyphicon glyphicon-menu-hamburger" (click)="openSidebar()"></span> Menu-hamburger
+    </a>
   </div>
-  <router-outlet></router-outlet>
-</body>
-</html>
+</div>
+<router-outlet></router-outlet>
