@@ -11,3 +11,9 @@ html, body {
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
   font-family: Rubik;
 }
+.container-fluid {
+  max-width: 1280px;
+  padding: 0;
+  margin: 0;
+  margin: auto;
+}
