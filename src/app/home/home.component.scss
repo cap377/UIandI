@@ -8,10 +8,21 @@ $secondary-text: #000000;
   padding: 0;
   margin: 0;
   text-align: center;
-  font-size: 1.5rem;
   background-color: $secondary-color;
   color: $secondary-text;
+  @media (min-width: 721px) {
+    h4 {
+      font-size: 2.5rem;
+    }
+  }
 }
+
+@media (min-width: 721px) {
+  .col-xs-12 {
+    font-size: 2rem;
+  }
+}
+
 .home-background-img {
   position: relative;
   img {
@@ -26,10 +37,16 @@ $secondary-text: #000000;
     padding: 5px;
     margin: 0;
     top: 50%;
-    background: rgb(0, 0, 0); 
+    background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.7);
   }
+  @media (min-width: 721px) {
+    h4 {
+      font-size: 3rem;
+    }
+  }
 }
+
 .home-timeline-img {
   position: relative;
   img {
@@ -47,11 +64,10 @@ $secondary-text: #000000;
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
   }
-}
-@media (max-width: 720px) {
-  .home-timeline-img {
+  @media (max-width: 720px) {
     display: none;
   }
 }
+
 @media (min-width: 721px) {}
 @media (min-width: 1024px) {}
