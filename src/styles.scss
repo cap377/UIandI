@@ -3,8 +3,11 @@ $primary-color: #243773;
 $primary-text: #FFFFFF;
 $secondary-color: #B7BEFF;
 $secondary-text: #000000;
+
 html, body {
   padding: 0;
   margin: 0;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
   font-family: Rubik;
 }
