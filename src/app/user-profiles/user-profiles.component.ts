@@ -8,7 +8,7 @@ const usersProfileInformation = [{
   email: "scout.martinelli@siriuscom.com",
   phone: "314-972-2054",
   bio: "My name is Scout Martinelli I was born and raised in Saint Louis, MO. I recently graduated from Mizzou or the University of Missouri - Columbia with a dual major in electrical engineering and computer engineering with a minor in math and computer science. I have already moved down to Austin with in the past three days. Im ecstatic to meet everyone!",
-  img: "../../assets/Scout.jpg",
+  img: "../../assets/scout2.png",
   backgroundImg: "../../assets/stl.jpg",
   city: "St. Louis",
   title: "Associate Solutions Specialist"
@@ -19,7 +19,7 @@ const usersProfileInformation = [{
   email: "scout.martinelli@siriuscom.com",
   phone: "314-972-2054",
   bio: "My name is Scout Martinelli I was born and raised in Saint Louis, MO. I recently graduated from Mizzou or the University of Missouri - Columbia with a dual major in electrical engineering and computer engineering with a minor in math and computer science. I have already moved down to Austin with in the past three days. Im ecstatic to meet everyone!",
-  img: "../../assets/Scout.jpg",
+  img: "../../assets/scout2.png",
   backgroundImg: "../../assets/stl.jpg",
   city: "St. Louis",
   title: "Associate Solutions Specialist"
@@ -30,7 +30,7 @@ const usersProfileInformation = [{
   email: "scout.martinelli@siriuscom.com",
   phone: "314-972-2054",
   bio: "My name is Scout Martinelli I was born and raised in Saint Louis, MO. I recently graduated from Mizzou or the University of Missouri - Columbia with a dual major in electrical engineering and computer engineering with a minor in math and computer science. I have already moved down to Austin with in the past three days. Im ecstatic to meet everyone!",
-  img: "../../assets/Scout.jpg",
+  img: "../../assets/scout2.png",
   backgroundImg: "../../assets/stl.jpg",
   city: "St. Louis",
   title: "Associate Solutions Specialist"
