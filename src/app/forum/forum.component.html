@@ -13,19 +13,23 @@
 </div> -->
 <!--Modal to create posts-->
 <div *ngIf="modalContainer" class="forum-modal-container">
-  <div class="row">
-    <div class="post-name-input-label col-xs-4">
+  <div class="row post-name-container">
+    <div class="post-name-label col-xs-4">
       Name:
     </div>
     <div class="post-name-input-container col-xs-8">
-      <input type="text" name="name" id="name" />
+      <input class="post-name-input" type="text" name="name" id="name" />
     </div>
   </div>
 
-  <div class="post-response-input-container">
-    <textarea>{{response}}</textarea>
+  <div>
+    <div class="post-name-label col-xs-4">
+      Name:
+    </div>
+    <div class="post-response-input-container">
+      <textarea class="post-response-input">{{response}}</textarea>
+    </div>
   </div>
-
   <!--cancel and accept buttons-->
   <div class="row">
     <div class="post-input-cancel-button-container col-xs-4">

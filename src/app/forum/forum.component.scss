@@ -1,13 +1,54 @@
+$primary-color: #243773;
+$primary-text: #FFFFFF;
+$secondary-color: #B7BEFF;
+$secondary-text: #000000;
+
+.forum-modal-container
+{
+  position: absolute;
+  z-index: 1;
+  @media(max-width: 720px)
+  {
+    width: 100%;
+    height: 100%;
+  }
+  background-color: red;
+  .post-name-container
+  {
+    padding: 10% 5% 0% 5%;
+    .post-name-label
+    {
+
+
+    }
+    .post-name-input
+    {
+      width: 100%;
+    }
+  }
+  .post-response-input-container
+  {
+    background-color: blue;
+    height: 60%;
+    padding: 10% 5% 10% 5%;
+    .post-response-input
+    {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 .add-question-post-btn
 {
   position: fixed;
-  right: 0px;
-  bottom: 0px;
+  right: 2%;
+  bottom: 2%;
   .add-question-post-btn
   {
     border-radius: 50%;
     border: none;
-    background-color: lightblue;
+    background-color: $secondary-color;
     width: 40px;
     height: 40px;
   }
