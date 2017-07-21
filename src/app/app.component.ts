@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ACE';
+
   openSidebar()
   {
     document.getElementById("main").style.marginLeft = "25%";
-    document.getElementById("mySidebar").style.width = "100%";
+    document.getElementById("mySidebar").style.width = "80px";
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("openNav").style.display = 'none';
   }
