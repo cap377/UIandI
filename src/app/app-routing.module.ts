@@ -7,9 +7,9 @@ import { UserProfilesComponent } from './user-profiles/user-profiles.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent},
-  { path: 'forum', component: ForumComponent},
-  { path: 'users', component: UserProfilesComponent}
+  { path: 'home', component: HomeComponent, data: {name: 'ACE'}},
+  { path: 'forum', component: ForumComponent, data: {name: 'Forums'}},
+  { path: 'users', component: UserProfilesComponent, data: {name: 'Users'}}
 ];
 
 @NgModule({
