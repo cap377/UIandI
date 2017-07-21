@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+
 import { ForumComponent } from './forum/forum.component';
 import { UserProfilesComponent } from './user-profiles/user-profiles.component';
 

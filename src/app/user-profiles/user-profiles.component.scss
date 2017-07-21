@@ -1,8 +1,108 @@
+$darkColor: #243773;
+$lightColor: #B7BEFF;
 @font-face {
   font-family: rubik;
   src: url("https://fonts.googleapis.com/css?family=Rubik");
 }
 
-html{
-  font-family: rubik;
+@keyframes user-info-animation{
+  from {
+    margin-top: -660px;
+  }
+  to{
+    margin-top: 0px;
+  }
 }
+
+html {
+  font-family: rubik;
+  margin: 0;
+  padding: 0;
+  background-color:  $lightColor;
+}
+
+//phone screens
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  //this is the container that shows the user picture and background pic
+  .user-profile-container {
+    overflow: hidden;
+  }
+
+  .user-profile-badge {
+    height: 125px;
+    width: 100vw;
+    //margin-top: 10px;
+    z-index: 10;
+    position: relative;
+    background-color: $lightColor;
+    display: block;
+  }
+
+  .user-profile-img-container img {
+    opacity: 1;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 7vw;
+    top: 22px;
+    border-radius: 10px;
+    //order: 1px solid $lightColor;
+    // :hover{
+    //   animation-name: user-picture-move;
+    //   animation-duration: 1s;
+    // }
+    z-index: 1;
+  }
+
+  .user-profile-name-container {
+    .user-profile-name-text {
+        position: absolute;
+        left:48vw;
+        top: 50px;
+        font-weight: bold;
+    }
+  }
+
+  .user-profile-background-img-container img {
+    height: 125px;
+    width: 100vw;
+    position: absolute;
+    border-radius: 10px;
+    //opacity: 0.5;
+    top: 0;
+    left: 0;
+  }
+
+  .user-profile-dropdown-button{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    top: 90px;
+    left: 90vw;
+    font-size: 25px;
+  }
+
+  //this is for the dropdown of that shows the person bio
+  .user-profile-information-container {
+    z-index: -1;
+    //margin-top: -25px;
+    height: 300px;
+    width: 100vw;
+    background: $lightColor;
+    display:block;
+    animation: user-info-animation .4s;
+    .user-profile-information-name {}
+
+    .user-profile-information-phone {}
+
+    .user-profile-information-email {}
+
+    .user-profile-information-bio {}
+  }
+}
+//tablets
+@media screen and (min-width: 720px) and (max-width: 1024px) {}
+//pcs
+@media screen and (min-width: 1024px) {}
