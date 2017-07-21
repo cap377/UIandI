@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ForumComponent } from './forum/forum.component';
 import { UserProfilesComponent } from './user-profiles/user-profiles.component';
 import { HomeComponent } from './home/home.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ForumComponent,
     UserProfilesComponent,
-    HomeComponent
+    HomeComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
