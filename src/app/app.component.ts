@@ -7,15 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  openSidebar()
-  {
+
+  openSidebar() {
     document.getElementById("main").style.marginLeft = "25%";
-    document.getElementById("mySidebar").style.width = "80px";
+    document.getElementById("mySidebar").style.width = "50%";
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("openNav").style.display = 'none';
   }
-  closeSidebar()
-  {
+  closeSidebar() {
     document.getElementById("main").style.marginLeft = "0%";
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("openNav").style.display = "inline-block";

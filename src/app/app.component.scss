@@ -2,12 +2,8 @@ $primary-color: #243773;
 $primary-text: #FFFFFF;
 $secondary-color: #B7BEFF;
 $secondary-text: #000000;
-html, body {
-  padding: 0;
-  margin: 0;
-}
 
-#responsiveNavHamburgerButton{
+#responsiveNavHamburgerButton {
   background-color: $primary-color;
   color: white;
   position: fixed;
@@ -19,16 +15,35 @@ html, body {
   font-size: 2rem;
   text-align: center;
   padding-top: 10px;
-  @media(min-width: 1025px){
+  @media(min-width: 1025px) {
     display: none;
   }
 }
-#responsiveNavClose{
+
+.row {
+  height: 30%;
+  font-size: 2rem;
+  border-bottom: solid #7682DB 1px;
+
+  a {
+    height: 100%;
+    font-size: 5rem;
+    padding-top: 30%;
+  }
+
+  h4 {
+    margin-top: -30px;
+    text-align: center;
+  }
+}
+
+#responsiveNavClose {
   background-color: #7682DB;
   height: 45px;
   color: white;
 }
-.responsive-nav-sidebar{
+
+.responsive-nav-sidebar {
   height: 100%;
   width: 100%;
   background-color: $secondary-color;
@@ -36,55 +51,60 @@ html, body {
   top: 0;
   left: 0;
   z-index: 2;
-  overflow:auto;
-}
-.responsive-nav-bar-item{
-  width:100%;
-  display:block;
-  padding:8px 16px;
-  text-align:left;
-  border:none;
-  outline:none;
-  white-space:normal;
-  float:none;
-}
-.responsive-nav-animate-left{
-  animation: animateleft 0.4s;
-}
-@keyframes animateleft{
-  from{
-    left:-900px;
-    opacity:0
-  }
-  to{
-    left:0;
-    opacity:1
-  }
-}
-.responsive-nav-button:hover{
-  color: $primary-text;
-  background-color:#7682DB;
+  overflow: hidden;
 }
 
-@media (max-width: 480px){
+.responsive-nav-bar-item {
+  width: 100%;
+  color: $secondary-text;
+  display: block;
+  text-align: center;
+  border: none;
+  outline: none;
+  white-space: normal;
+  float: none;
+}
+
+.responsive-nav-animate-left {
+  animation: animateleft 0.4s;
+}
+@keyframes animateleft {
+  from {
+    left: -900px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.responsive-nav-button:hover {
+  color: $primary-text;
+  background-color: #7682DB;
+}
+@media (max-width: 480px) {
   .app-title-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 45px;
-    padding-top: 5px;
+    padding-top: 8px;
     background-color: $primary-color;
     text-align: center;
+
     #app-title-bar-title {
       color: $primary-text;
       font-weight: bold;
       font-size: 2rem;
     }
   }
-  .router-content{
+
+  .router-content {
     margin-top: 50px;
   }
 }
-@media (min-width: 481px){}
-@media (min-width: 1024px){}
+@media (min-width: 481px) {}
+@media (min-width: 1024px) {}
