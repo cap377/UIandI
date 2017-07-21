@@ -55,6 +55,25 @@ $secondary-text: #000000;
   }
 }
 
+@media (min-width: 721px){
+  .row {
+    height: 30%;
+    font-size: 5rem;
+    border-bottom: solid #7682DB 2px;
+
+    a {
+      height: 100%;
+      font-size: 5rem;
+      padding-top: 50%;
+    }
+
+    h4 {
+      margin-top: -30px;
+      text-align: center;
+    }
+  }
+}
+
 #responsiveNavClose {
   background-color: #7682DB;
   height: 45px;
@@ -62,6 +81,17 @@ $secondary-text: #000000;
   color: $secondary-text;
   font-size: 3rem;
   text-align: left;
+}
+
+@media (min-width: 721px) {
+  #responsiveNavClose {
+    background-color: #7682DB;
+    height: 90px;
+    top: 0;
+    color: $secondary-text;
+    font-size: 5rem;
+    text-align: left;
+  }
 }
 
 .responsive-nav-sidebar {
@@ -86,7 +116,7 @@ $secondary-text: #000000;
     left: 0;
     z-index: 999;
     overflow: hidden;
-    border-right: solid #7682DB 1px;
+    border-right: solid #7682DB 2px;
   }
 }
 
