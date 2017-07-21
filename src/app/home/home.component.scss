@@ -1,0 +1,14 @@
+$primary-color: #243773;
+$primary-text: #FFFFFF;
+$secondary-color: #B7BEFF;
+$secondary-text: #000000;
+
+.home-section-title {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: $secondary-color;
+  color: $secondary-text;
+}

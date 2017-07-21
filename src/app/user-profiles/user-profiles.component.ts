@@ -56,6 +56,7 @@ export class UserProfilesComponent implements OnInit {
   menuState = "up";
   glyphicon = true;
   glyphiconClass = "glyphicon glyphicon-chevron-down";
+  title = 'Users';
 
   constructor() {
 
@@ -77,7 +78,6 @@ export class UserProfilesComponent implements OnInit {
     // this.glyphicon = !this.glyphicon;
      //this.glyphiconClass = this.glyphicon ? "glyphicon glyphicon-chevron-down" : "glyphicon glyphicon-chevron-up";
    }
-
   ngOnInit() {
 
   }

@@ -1,3 +1,68 @@
-<p>
-  forum works!
-</p>
+<!-- <div class="container">
+  <h2>Simple Collapsible</h2>
+  <p>Click on the button to toggle between showing and hiding content.</p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div> -->
+<!-- <div [innerHtml]="questionListHtml">
+
+</div> -->
+<!--Modal to create posts-->
+<div *ngIf="modalContainer" class="forum-modal-container">
+  <div class="row post-name-container">
+    <div class="post-name-label col-xs-4">
+      Name:
+    </div>
+    <div class="post-name-input-container col-xs-8">
+      <input class="post-name-input" type="text" name="name" id="name" />
+    </div>
+  </div>
+
+  <div>
+    <div class="post-name-label col-xs-4">
+      Name:
+    </div>
+    <div class="post-response-input-container">
+      <textarea class="post-response-input">{{response}}</textarea>
+    </div>
+  </div>
+  <!--cancel and accept buttons-->
+  <div class="row">
+    <div class="post-input-cancel-button-container col-xs-4">
+      <button (click)="closePostInputModal()">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancel
+      </button>
+    </div>
+    <div class="col-xs-4">
+
+    </div>
+    <div class="post-input-cancel-button-container col-xs-4">
+      <button (click)="createPostFunction()">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Accept
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="question-message-list-container" *ngFor="let question of questionList; let i = index">
+  <div class="row">
+    <div class="question-post-container">
+      <!-- <app-post></app-post> -->
+    </div>
+  </div>
+
+  <div class="add-reply-post-btn-container">
+    <button (click)="getReplyPostInformation(i)">
+    </button>
+  </div>
+</div>
+
+<div class="add-question-post-btn">
+  <button class="add-question-post-btn" (click)="getQuestionPostInformation()">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </button>
+</div>
