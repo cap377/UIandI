@@ -45,13 +45,23 @@ export class ForumComponent implements OnInit {
   }
   addReplyPost()
   {
-
+    let tempName = this.name;
+    let tempResponse = this.response;
+    this.name = "";
+    this.response = "";
+    let curTime = new Date();
+    this.questionList[this.currentReplyIndex].replies.push({
+      name : tempName,
+      response : tempResponse,
+      timeStamp : curTime
+    });
+    this.modalContainer = false;
   }
   getReplyPostInformation(i: number)
   {
 
     this.currentReplyIndex = i;
-    this.postType = "Question";
+    this.postType = "Reply";
     this.createPostFunction = this.addReplyPost;
     this.modalContainer = true;
   }
