@@ -2,15 +2,18 @@
   <div class="user-profile-container" *ngFor="let user of users; let i = index">
 
     <!-- Profile badge -->
+    <div class="user-profile-badge-title">
+      <img  alt="ribbon" src="../../assets/ribbon.png"/>
+      <div class="user-profile-name-text">
+        {{user.firstName + " " + user.lastName}}
+      </div>
+    </div>
     <div class="user-profile-badge" (click)="toggleData(user,i)">
       <div class="user-profile-img-container">
         <img alt="user image" src={{user.img}}/>
       </div>
       <div class="user-profile-background-img-container">
         <img alt="backgroung image" src={{user.backgroundImg}}/>
-      </div>
-      <div class="user-profile-name-container">
-        <div class="user-profile-name-text"> {{user.firstName + " " + user.lastName}} </div>
       </div>
       <div class="user-profile-dropdown-button" [ngClass]="selectedIndex == i ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'">
       </div>
