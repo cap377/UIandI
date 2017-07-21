@@ -40,7 +40,9 @@ $secondary-text: #000000;
 #responsiveNavClose {
   background-color: #7682DB;
   height: 45px;
-  color: white;
+  color: $secondary-text;
+  font-size: 3rem;
+  text-align: left;
 }
 
 .responsive-nav-sidebar {
