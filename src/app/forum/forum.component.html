@@ -18,7 +18,7 @@
       Name:
     </div>
     <div class="post-name-input-container col-xs-9">
-      <input class="post-name-input" type="text" name="name" id="name" />
+      <input class="post-name-input" type="text" name="name" [(ngModel)]="name" />
     </div>
   </div>
 
@@ -27,7 +27,7 @@
       {{postType}}:
     </div>
     <div class="post-response-input-container col-xs-9">
-      <textarea class="post-response-input">{{response}}</textarea>
+      <textarea class="post-response-input" [(ngModel)]="response"></textarea>
     </div>
   </div>
   <!--cancel and accept buttons-->
@@ -48,15 +48,25 @@
   </div>
 </div>
 
-<div class="question-message-list-container" *ngFor="let question of questionList; let i = index">
+<div class="question-post-list-container" *ngFor="let question of questionList; let i = index">
   <div class="row">
-    <div class="question-post-container">
-      <!-- <app-post></app-post> -->
+    <div class="question-post-container col-xs-6">
+      <app-post
+        [name]="question.name"
+        [response]="question.response"
+        [timeStamp]="question.timeStamp"></app-post>
     </div>
+    <div class="col-xs-6">
+    </div>
+  </div>
+
+  <div class="reply-post-list-container" *ngFor="let reply of question.replies">
+
   </div>
 
   <div class="add-reply-post-btn-container">
     <button (click)="getReplyPostInformation(i)">
+      <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
     </button>
   </div>
 </div>

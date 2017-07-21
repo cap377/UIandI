@@ -30,6 +30,8 @@ export class ForumComponent implements OnInit {
   {
     let tempName = this.name;
     let tempResponse = this.response;
+    this.name = "";
+    this.response = "";
     let curTime = new Date();
     //alert(curTime);
     //let tempTimeStamp =

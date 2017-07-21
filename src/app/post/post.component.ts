@@ -7,7 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  //@Input()
+  @Input()name:string;
+  @Input()response:string;
+  @Input()timeStamp:string;
   constructor() { }
 
   ngOnInit() {
