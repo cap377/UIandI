@@ -18,7 +18,7 @@
       Name:
     </div>
     <div class="post-name-input-container col-xs-9">
-      <input class="post-name-input" type="text" name="name" [(ngModel)]="name" />
+      <input class="post-name-input" type="text" name="name" [(ngModel)]="name" placeholder="{{requiredInputText}}" />
     </div>
   </div>
 
@@ -27,7 +27,7 @@
       {{postType}}:
     </div>
     <div class="post-response-input-container col-xs-9">
-      <textarea class="post-response-input" [(ngModel)]="response"></textarea>
+      <textarea class="post-response-input" [(ngModel)]="response" placeholder="{{requiredResponseText}}"></textarea>
     </div>
   </div>
   <!--cancel and accept buttons-->
@@ -50,21 +50,21 @@
 
 <div class="question-post-list-container" *ngFor="let question of questionList; let i = index">
   <div class="row">
-    <div class="question-post-container col-xs-6">
+    <div class="question-post-container col-xs-9">
       <app-post
         [name]="question.name"
         [response]="question.response"
         [timeStamp]="question.timeStamp"></app-post>
     </div>
-    <div class="col-xs-6">
+    <div class="col-xs-3">
     </div>
   </div>
 
   <div class="reply-post-list-container" *ngFor="let reply of question.replies">
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-xs-3">
       </div>
-      <div class="reply-post-container col-xs-6">
+      <div class="reply-post-container col-xs-9">
         <app-post
           [name]="reply.name"
           [response]="reply.response"

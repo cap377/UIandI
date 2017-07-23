@@ -1,0 +1,14 @@
+$primary-color: #243773;
+$primary-text: #FFFFFF;
+$secondary-color: #B7BEFF;
+$secondary-text: #000000;
+
+.post-container
+{
+  margin: 5% 10% 5% 10%;
+  background-color: $secondary-color;
+  .post-response-field
+  {
+    margin: 5% 0% 5% 10%;
+  }
+}
