@@ -59,7 +59,7 @@ export class UserProfilesComponent implements OnInit {
   users = usersProfileInformation;
   selectedUser = null;
   selectedIndex = null;
-  menuState = "up";
+  selectedAnimation = "user-info-animation-phone-down";
   glyphicon = true;
   glyphiconClass = "glyphicon glyphicon-chevron-down";
   title = 'Users';
@@ -70,21 +70,19 @@ export class UserProfilesComponent implements OnInit {
 
    toggleData(user,index){
      if(user == this.selectedUser){
-       this.selectedUser = null;
-       this.selectedIndex = null;
-      //  this.menuState = 'down';
+       setTimeout(() => {
+         this.selectedUser = null;
+         this.selectedIndex = null;
+       }, 600);
+       this.selectedAnimation = "user-info-animation-phone-up";
      }
      else{
        this.selectedUser = user;
-       //setTimeout
        this.selectedIndex = index;
-      //  this.menuState = 'up';
+       this.selectedAnimation = "user-info-animation-phone-down";
      }
-
-
-    // this.glyphicon = !this.glyphicon;
-     //this.glyphiconClass = this.glyphicon ? "glyphicon glyphicon-chevron-down" : "glyphicon glyphicon-chevron-up";
    }
+
   ngOnInit() {
 
   }

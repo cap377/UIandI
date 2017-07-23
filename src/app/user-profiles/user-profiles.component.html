@@ -4,16 +4,19 @@
     <!-- Profile badge -->
     <div class="user-profile-badge-title">
       <img  alt="ribbon" src="../../assets/ribbon.png"/>
-      <div class="user-profile-name-text">
-        {{user.firstName + " " + user.lastName}}
+      <div class ="user-profile-job-title-text">
+        {{user.title}}
       </div>
     </div>
     <div class="user-profile-badge" (click)="toggleData(user,i)">
+      <div class="user-profile-background-img-container">
+        <img alt="backgroung image" src={{user.backgroundImg}}/>
+      </div>
       <div class="user-profile-img-container">
         <img alt="user image" src={{user.img}}/>
       </div>
-      <div class="user-profile-background-img-container">
-        <img alt="backgroung image" src={{user.backgroundImg}}/>
+      <div class="user-profile-name-text">
+        {{user.firstName + " " + user.lastName}}
       </div>
       <div class="user-profile-dropdown-button" [ngClass]="selectedIndex == i ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'">
       </div>
@@ -22,11 +25,16 @@
 
     <!-- dropdown information -->
     <div *ngIf="selectedIndex == i">
-      <div class="user-profile-information-container">
-        <div class="user-profile-information-name">
+      <div class="user-profile-information-container" [style.animation]="selectedAnimation + '.6s'">
+        <!-- <div class="user-profile-information-name">
           <span class="glyphicon glyphicon-user" alt="name"></span>
-          <!-- <span> Name: </span> -->
+           <span> Name: </span>
           <span> {{selectedUser.firstName +" "+ selectedUser.lastName}} </span>
+        </div> -->
+        <div class="user-profile-information-border">
+        </div>
+        <div class="user-profile-information-contact">
+            CONTACT
         </div>
         <div class="user-profile-information-phone">
           <span class="glyphicon glyphicon-earphone" alt="phone"></span>
@@ -37,6 +45,14 @@
           <span class="glyphicon glyphicon-envelope" alt="email"></span>
           <!-- <span> Email: </span> -->
           <span> {{selectedUser.email}} </span>
+        </div>
+        <!-- <div class="user-profile-information-city">
+          <span class="glyphicon glyphicon-plane" alt="city"></span>
+           <span> Home: </span>
+          <span> {{selectedUser.city}} </span>
+        </div> -->
+        <div class="user-profile-information-contact">
+            BIOGRAPHY
         </div>
         <div class="user-profile-information-bio">
           <span class="glyphicon glyphicon-info-sign" alt="bio"></span>
