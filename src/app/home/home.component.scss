@@ -6,12 +6,13 @@ $secondary-text: #000000;
 .home-section-title {
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: auto;
   text-align: center;
   background-color: transparent;
   background-image: url("../../assets/bannerLight.png");
   background-repeat: no-repeat;
-  background-size:100% 47px;
+  background-position: center;
+  background-size:80% 47px;
   color: $secondary-text;
   @media (min-width: 721px) {
     h4 {
@@ -120,6 +121,7 @@ $secondary-text: #000000;
     max-width: calc(100% + 30px);
     margin-left: -15px;
     padding-right: 0;
+    padding-top: 5px;
   }
   @media (max-width: 1024px) {
     display: none;
