@@ -1,7 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<!-- <router-outlet></router-outlet> -->
-
 <div class="responsive-nav-sidebar responsive-nav-animate-left" style="display:none" id="mySidebar">
   <button id="responsiveNavClose" class="responsive-nav-bar-item responsive-nav-button glyphicon glyphicon-arrow-left" (click)="closeSidebar()"></button>
   <div class="row">
@@ -27,6 +23,19 @@
 <div class="app-title-bar">
   <div id="app-title-bar-title">
     {{title}}
+  </div>
+  <div id="app-title-bar-links" class="container">
+    <ul>
+      <li>
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li>
+        <a routerLink="/forum" routerLinkActive="active">Forums</a>
+      </li>
+      <li>
+        <a routerLink="/users" routerLinkActive="active">Personnel</a>
+      </li>
+    </ul>
   </div>
 </div>
 <!-- PUT NORMAL NAV BAR HERE -->

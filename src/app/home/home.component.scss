@@ -45,6 +45,30 @@ $secondary-text: #000000;
       font-size: 3rem;
     }
   }
+  @media (min-width: 1025px){
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 100%;
+    height: 500px;
+    background: center center no-repeat;
+    background-size: cover;
+    img {
+      display: none;
+    }
+    h4 {
+      font-size: 5rem;
+      text-align: center;
+      color: white;
+      position: absolute;
+      width: 100%;
+      padding: 5px;
+      margin: 0;
+      top: 50%;
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
 }
 
 .home-timeline-img {
@@ -67,6 +91,44 @@ $secondary-text: #000000;
   @media (max-width: 720px) {
     display: none;
   }
+}
+@media (min-width: 1024px) {
+  #home-recruiting {
+    margin-top: 590px;
+  }
+  #statistic-image {
+    img {
+      max-width: 50%;
+    }
+  }
+  #home-recruiting {
+    padding-top: 10px;
+  }
+  #home-employement-training {
+    padding-top: 10px;
+  }
+  #home-statistics {
+    padding-top: 10px;
+  }
+}
+#home-apply{
+  padding-top: 10px !important;
+  img {
+    max-width: calc(100% + 30px);
+    margin-left: -15px;
+    padding-right: 0;
+  }
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.home-apply-button {
+  padding: 2px;
+  color: $primary-color;
+  border: solid $primary-color 1px;
+  border-radius: 3px;
+  float: right;
+  background-color: white;
 }
 
 @media (min-width: 721px) {}
