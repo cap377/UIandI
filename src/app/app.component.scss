@@ -124,6 +124,28 @@ $secondary-text: #000000;
     }
     @media (min-width: 1024px) {
       font-size: 5rem;
+      float: left;
+      padding-left: 30px;
+    }
+  }
+  #app-title-bar-links {
+    position: absolute;
+    font-size: 3rem;
+    margin-top: 25px;
+    width: 100%;
+    ul {
+      margin: auto;
+      li {
+        list-style: none;
+        display: inline-block;
+        padding-left: 10px;
+        a {
+          color: $primary-text;
+        }
+      }
+    }
+    @media (max-width: 1023px) {
+      display: none;
     }
   }
   @media (min-width: 721px) {
