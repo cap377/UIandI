@@ -159,7 +159,7 @@ $lightColor: #B7BEFF;
       //padding: 0px 110px;
     }
 
-    .user-profile-information-contact{
+    .user-profile-information-title-text{
       font-size: 2.2rem;
       font-weight: bold;
       font-style: oblique;
@@ -169,6 +169,12 @@ $lightColor: #B7BEFF;
       margin-bottom: 10px;
       text-decoration: underline;
     }
+
+    .user-profile-information-title img{
+      height: 50px;
+      width: 50vw;
+    }
+
 
     .user-profile-information-name {}
 

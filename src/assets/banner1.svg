@@ -9,13 +9,13 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    enable-background="new 0 0 800 600"
    version="1.1"
-   viewBox="0 0 800 200"
+   viewBox="0 0 1600 200"
    id="svg3823"
    sodipodi:docname="banner1.svg"
    inkscape:version="0.92.1 r15371"
-   width="800"
+   width="1600"
    height="200"
-   inkscape:export-filename="C:\Users\ScoutM\Documents\Angular\UIandI\src\assets\banner1.png"
+   inkscape:export-filename="C:\Users\ScoutM\Documents\Angular\UIandI\src\assets\bannerDark.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <metadata
@@ -73,7 +73,7 @@
        id="stop3682" />
   </radialGradient>
   <polygon
-     points="278.31,225.67 287.48,205.75 80.23,205.75 89.395,225.67 80.23,245.58 287.48,245.58 "
+     points="80.23,205.75 89.395,225.67 80.23,245.58 287.48,245.58 278.31,225.67 287.48,205.75 "
      id="polygon3687"
      transform="matrix(3.861635,0,0,5.0308131,-310.14284,-1035.0898)"
      style="fill:#b7beff;fill-opacity:1" />
