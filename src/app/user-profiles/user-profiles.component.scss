@@ -56,12 +56,14 @@ $lightColor: #B7BEFF;
   }
 
   .user-profile-badge-title img{
-    width: 108vw;
-    height:75px;
+    width: 100vw;
+    height: 50px;
     position: relative;
     z-index: 5;
-    margin-left: -3vw;
-    margin-bottom: -50px;
+    margin-left: 0vw;
+    margin-bottom: -40px;
+    //viewbox: 0 0 1000px 1000px;
+    //fill: $lightColor;
   }
 
   .user-profile-name-text {
@@ -193,12 +195,13 @@ $lightColor: #B7BEFF;
   }
 
   .user-profile-badge-title img{
-    width: 112vw;
-    height:150px;
+    width: 100vw;
+    height: 100px;
     position: relative;
     z-index: 5;
-    margin-left: -5vw;
-    margin-bottom: -100px;
+    //margin-left: -5vw;
+    padding-top: 10px;
+    margin-bottom: -67px;
   }
 
   .user-profile-name-text {
