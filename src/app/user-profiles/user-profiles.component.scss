@@ -1,23 +1,51 @@
 $darkColor: #243773;
 $lightColor: #B7BEFF;
 
-@keyframes user-info-animation-phone{
+@keyframes user-info-animation-phone-down{
     from {
-      margin-top: -155px;
+      height: 0px;
     }
     to{
-      margin-top: 0px;
+      @media screen and (max-width: 720px){
+          height: 510px;
+      }
+      @media screen and (min-width: 720px) and (max-width: 1024px){
+        height: 600px;
+      }
     }
 }
 
-@keyframes user-info-animation-tablet{
+@keyframes user-info-animation-phone-up{
     from {
-      margin-top: -400px;
+      @media screen and (max-width: 720px){
+          height: 510px;
+      }
+      @media screen and (min-width: 720px) and (max-width: 1024px){
+        height: 600px;
+      }
     }
     to{
-      margin-top: 0px;
+      height: 0px;
     }
 }
+
+// @keyframes user-info-animation-tablet-down{
+//   from {
+//     height: 0px;
+//   }
+//   to{
+//     height: 800px;
+//   }
+// }
+//
+// @keyframes user-info-animation-tablet-up{
+//     from {
+//       height: 800px;
+//     }
+//     to{
+//       height: 0px;
+//     }
+// }
 
 //phone screens----------------------------------------------------------------------------
 @media screen and (max-width: 720px) {
@@ -37,13 +65,24 @@ $lightColor: #B7BEFF;
   }
 
   .user-profile-name-text {
-      position: relative;
-      text-align: center;
-      //left: 40vw;
-      bottom: 0px;
-      z-index: 6;
-      font-weight: bold;
-      color: white;
+    position: relative;
+    z-index: 6;
+    top: 50px;
+    left: 40vw;
+    font-weight:bold;
+    font-size: 2rem;
+    color: white;
+
+  }
+
+  .user-profile-job-title-text{
+    position: relative;
+    text-align: center;
+    //left: 40vw;
+    bottom: 0px;
+    z-index: 6;
+    font-weight: bold;
+    color: white;
   }
 
   .user-profile-badge {
@@ -104,21 +143,44 @@ $lightColor: #B7BEFF;
   .user-profile-information-container {
     z-index: -1;
     margin-top: 0px;
-    height: 400px;
+    height: 510px;
     width: 100vw;
     background-color: transparent;
     display:block;
-    animation: user-info-animation-phone .8s;
+    animation: user-info-animation-phone-down .6s;
     text-align: center;
-    font-size: 20px;
+    font-size: 2rem;
+
+    .user-profile-information-border{
+      //  border-radius: 1000px;
+      //  border-top: .5px solid $lightColor;
+      //padding: 0px 110px;
+    }
+
+    .user-profile-information-contact{
+      font-size: 2.2rem;
+      font-weight: bold;
+      font-style: oblique;
+      border-radius: 1000px;
+      border-top: .5px solid $lightColor;
+      padding-top: 25px;
+      margin-bottom: 10px;
+      text-decoration: underline;
+    }
 
     .user-profile-information-name {}
 
     .user-profile-information-phone {}
 
-    .user-profile-information-email {}
+    .user-profile-information-email {
+      margin-bottom: 20px;
+    }
 
-    .user-profile-information-bio {}
+    .user-profile-information-city {}
+
+    .user-profile-information-bio {
+      padding-bottom: 5px;
+    }
   }
 }
 
@@ -131,23 +193,33 @@ $lightColor: #B7BEFF;
   }
 
   .user-profile-badge-title img{
-    width: 108vw;
+    width: 112vw;
     height:150px;
     position: relative;
     z-index: 5;
-    margin-left: -3vw;
+    margin-left: -5vw;
     margin-bottom: -100px;
   }
 
   .user-profile-name-text {
-      position: relative;
-      text-align: center;
-      //left: 40vw;
-      bottom: 0px;
-      z-index: 6;
-      font-weight: bold;
-      color: white;
-      font-size: 3rem;
+    position: relative;
+    z-index: 6;
+    top: 100px;
+    left: 40vw;
+    font-weight:bold;
+    font-size: 4rem;
+    color: white;
+
+  }
+
+  .user-profile-job-title-text{
+    position: relative;
+    text-align: center;
+    bottom: 0px;
+    z-index: 6;
+    font-weight: bold;
+    color: white;
+    font-size: 3rem;
   }
 
   .user-profile-badge {
@@ -208,7 +280,7 @@ $lightColor: #B7BEFF;
   .user-profile-information-container {
     z-index: -1;
     margin-top: 0px;
-    height:800px;
+    height: 600px;
     width: 100vw;
     background-color: transparent;
     display:block;
@@ -216,13 +288,29 @@ $lightColor: #B7BEFF;
     text-align: center;
     font-size: 3rem;
 
+    .user-profile-information-contact{
+      font-size: 2.2rem;
+      font-weight: bold;
+      font-style: oblique;
+      border-radius: 50px;
+      border-top: .5px solid $lightColor;
+      padding-top: 5px;
+      margin-bottom: 10px;
+    }
+
     .user-profile-information-name {}
 
     .user-profile-information-phone {}
 
-    .user-profile-information-email {}
+    .user-profile-information-email {
+      margin-bottom: 20px;
+    }
 
-    .user-profile-information-bio {}
+    .user-profile-information-city {}
+
+    .user-profile-information-bio {
+      padding-bottom: 5px;
+    }
   }
 }
 //pcs
@@ -310,7 +398,7 @@ $lightColor: #B7BEFF;
   .user-profile-information-container {
     z-index: -1;
     margin-top: 0px;
-    height: 400px;
+    height: 500px;
     width: 100vw;
     background-color: transparent;
     display:block;
