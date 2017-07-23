@@ -7,7 +7,7 @@ $lightColor: #B7BEFF;
     }
     to{
       @media screen and (max-width: 720px){
-          height: 510px;
+          height: 575px;
       }
       @media screen and (min-width: 720px) and (max-width: 1024px){
         height: 600px;
@@ -18,7 +18,7 @@ $lightColor: #B7BEFF;
 @keyframes user-info-animation-phone-up{
     from {
       @media screen and (max-width: 720px){
-          height: 510px;
+          height: 575px;
       }
       @media screen and (min-width: 720px) and (max-width: 1024px){
         height: 600px;
@@ -57,7 +57,7 @@ $lightColor: #B7BEFF;
 
   .user-profile-badge-title img{
     width: 100vw;
-    height: 50px;
+    height: 40px;
     position: relative;
     z-index: 5;
     margin-left: 0vw;
@@ -143,9 +143,10 @@ $lightColor: #B7BEFF;
 
   //this is for the dropdown of that shows the person bio
   .user-profile-information-container {
+    //position:relative;
     z-index: -1;
     margin-top: 0px;
-    height: 510px;
+    height: 575px;
     width: 100vw;
     background-color: transparent;
     display:block;
@@ -159,26 +160,38 @@ $lightColor: #B7BEFF;
       //padding: 0px 110px;
     }
 
-    .user-profile-information-title-text{
-      font-size: 2.2rem;
-      font-weight: bold;
-      font-style: oblique;
-      border-radius: 1000px;
-      border-top: .5px solid $lightColor;
-      padding-top: 25px;
-      margin-bottom: 10px;
-      text-decoration: underline;
-    }
-
-    .user-profile-information-title img{
+    .user-profile-information-title{
       height: 50px;
-      width: 50vw;
+      width: 100vw;
     }
+      .user-profile-information-title img{
+        z-index: 5;
+        position:relative;
+        height: 50px;
+        width: 50vw;
+        //bottom: -60px;
+      }
+
+      .user-profile-information-title-text{
+        z-index: 6;
+        position:relative;
+        font-size: 2.2rem;
+        font-weight: bold;
+        font-style: oblique;
+        border-radius: 1000px;
+        border-top: .5px solid $lightColor;
+        padding-top: 20px;
+        bottom: 60px;
+        //margin-bottom: 20px;
+        text-decoration: underline;
+      }
 
 
     .user-profile-information-name {}
 
-    .user-profile-information-phone {}
+    .user-profile-information-phone {
+      margin-top: 10px;
+    }
 
     .user-profile-information-email {
       margin-bottom: 20px;
@@ -187,6 +200,7 @@ $lightColor: #B7BEFF;
     .user-profile-information-city {}
 
     .user-profile-information-bio {
+      margin-top: 10px;
       padding-bottom: 5px;
     }
   }

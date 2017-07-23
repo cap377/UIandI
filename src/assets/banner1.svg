@@ -9,12 +9,12 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    enable-background="new 0 0 800 600"
    version="1.1"
-   viewBox="0 0 1600 200"
+   viewBox="0 0 1600 400"
    id="svg3823"
    sodipodi:docname="banner1.svg"
    inkscape:version="0.92.1 r15371"
    width="1600"
-   height="200"
+   height="400"
    inkscape:export-filename="C:\Users\ScoutM\Documents\Angular\UIandI\src\assets\bannerDark.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
@@ -35,7 +35,7 @@
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
-     borderopacity="0"
+     borderopacity="0.00392157"
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
@@ -46,7 +46,7 @@
      id="namedview3825"
      showgrid="true"
      inkscape:zoom="0.5"
-     inkscape:cx="-275.36607"
+     inkscape:cx="981.90637"
      inkscape:cy="548.65947"
      inkscape:window-x="3495"
      inkscape:window-y="116"
@@ -73,8 +73,10 @@
        id="stop3682" />
   </radialGradient>
   <polygon
-     points="80.23,205.75 89.395,225.67 80.23,245.58 287.48,245.58 278.31,225.67 287.48,205.75 "
+     points="287.48,245.58 278.31,225.67 287.48,205.75 80.23,205.75 89.395,225.67 80.23,245.58 "
      id="polygon3687"
-     transform="matrix(3.861635,0,0,5.0308131,-310.14284,-1035.0898)"
-     style="fill:#b7beff;fill-opacity:1" />
+     transform="matrix(7.7217074,0,0,10.052154,-619.83645,-2068.2306)"
+     style="fill:#243773;fill-opacity:1"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
 </svg>
