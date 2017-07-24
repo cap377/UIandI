@@ -10,13 +10,17 @@ $secondary-text: #000000;
 
   background-color: $secondary-color;
   left: 0%;
-  top: 65%;
+  top: 60%;
   position: fixed;
   z-index: 1000;
   width: 100%;
-  height: 35%;
+  height: 40%;
 
   font-size: 1vw;
+  @media(min-width: 721px)
+  {
+    animation: animateExpand 0.5s;
+  }
   @media(max-width: 720px)
   {
     animation: animateExpandMobile 0.5s;
@@ -28,6 +32,7 @@ $secondary-text: #000000;
   {
     height: 100%;
     width: 100%;
+    font-size: 2vw;
     @media(max-width: 720px)
     {
       padding: 0% 5%;
@@ -182,7 +187,22 @@ $secondary-text: #000000;
     }
   }
 }
+@keyframes animateExpand
+{
+  from {
+    left: 0%;
+    top: 100%;
+    height: 0%;
+    opacity: 0;
+  }
 
+  to {
+    left: 0%;
+    top: 60%;;
+    height: 40%;
+    opacity: 1;
+  }
+}
 @keyframes animateExpandMobile
 {
   from {
