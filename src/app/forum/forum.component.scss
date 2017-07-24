@@ -6,84 +6,184 @@ $secondary-text: #000000;
 
 .forum-modal-container
 {
-  animation: animateExpand 0.5s;
+
+
   background-color: $secondary-color;
   left: 0%;
-  top: 0%;
-  position: absolute;
+  top: 65%;
+  position: fixed;
   z-index: 1000;
+  width: 100%;
+  height: 35%;
+
+  font-size: 1vw;
   @media(max-width: 720px)
   {
-    width: 100%;
+    animation: animateExpandMobile 0.5s;
+    font-size: 12px;
+    top: 0%;
     height: 100%;
   }
-  .post-name-container
+  .modal-row
   {
-    background-color: $primary-color;
-    color: $primary-text;
-    margin: 5% 5% 5% 5%;
-    padding: 5% 5% 5% 2.5%;
-    height: 10%;
-    .post-name-label
+    height: 100%;
+    width: 100%;
+    @media(max-width: 720px)
     {
-      text-align: center;
-
+      padding: 0% 5%;
     }
-    .post-name-input-container
+    .post-name-container
     {
-      padding: 0%;
-      .post-name-input
-      {
-        color: black;
-        width: 100%;
-      }
-    }
-  }
-  .post-response-container
-  {
-    background-color: $primary-color;
-    color: $primary-text;
-    margin: 5% 5% 5% 5%;
-    padding: 5% 5% 5% 2.5%;
-    height: 70%;
-    .post-response-label
-    {
-      text-align: center;
-      position: relative;
-      top: 50%;
-    }
-    .post-response-input-container
-    {
-      height: 100%;
-      padding: 0%;
-      .post-response-input
-      {
-        color: black;
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-  .post-button-container
-  {
-    color: $primary-text;
-    margin: 5% 15% 15% 5%;
-    padding: 0% 5% 5% 10%;
-    height: 10%;
-    button
-    {
-      font-size: 2em;
       background-color: $primary-color;
-      border: none;
-      border-radius: 50%;
-      padding: 15%;
-      width: 100%;
-      height: 100%;
+      color: $primary-text;
+      padding: 1%;
+      @media(max-width: 720px)
+      {
+        margin: 5% 5% 5% 5%;
+        padding: 5% 5% 5% 2.5%;
+        height: 10%;
+      }
+      .post-name-label
+      {
+        text-align: center;
+        padding-left: 0%;
+      }
+      .post-name-input-container
+      {
+        padding: 0%;
+        .post-name-input
+        {
+          color: black;
+          width: 100%;
+        }
+      }
+    }
+    .post-response-container
+    {
+      background-color: $primary-color;
+      color: $primary-text;
+      margin: 1%;
+      width: 70%;
+      height: 70%;
+
+      padding: 2% 2% 2% 2%;
+      @media(max-width: 720px)
+      {
+        margin: 5% 5% 5% 5%;
+        padding: 5% 5% 5% 2.5%;
+        height: 60%;
+        width: 100%;
+      }
+      .post-response-label
+      {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        padding-left: 0%;
+      }
+      .post-response-input-container
+      {
+        height: 100%;
+        padding: 0%;
+        .post-response-input
+        {
+          color: black;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .post-button-container
+    {
+      color: $primary-text;
+      @media(max-width: 720px)
+      {
+        margin: 10% 15% 15% 5%;
+        padding: 0% 5% 5% 10%;
+        height: 10%;
+      }
+      .post-input-cancel-button-container
+      {
+        margin-left: 40%;
+        margin-top: 7%;
+        @media(max-width: 1050px)
+        {
+        }
+        @media(max-width: 720px)
+        {
+          margin: 0%;
+        }
+        button
+        {
+          font-size: 1.2vw;
+          background-color: $primary-color;
+          border: none;
+          border-radius: 50%;
+          width: 3vw;
+          height: 3vw;
+          @media(max-width: 1250px)
+          {
+            font-size: 2vw;
+            width: 4vw;
+            height: 4vw;
+          }
+          @media(max-width: 1050px)
+          {
+            width: 5vw;
+            height: 5vw;
+          }
+          @media(max-width: 720px)
+          {
+            width: 50px;
+            height: 50px;
+            font-size: 12px;
+          }
+        }
+      }
+      .post-input-accept-button-container
+      {
+        margin-left: 40%;
+        margin-top: 7%;
+        @media(max-width: 1050px)
+        {
+        }
+        @media(max-width: 720px)
+        {
+          margin: 0%;
+        }
+        button
+        {
+          font-size: 1.5vw;
+          background-color: $primary-color;
+          border: none;
+          border-radius: 50%;
+          width: 3vw;
+          height: 3vw;
+          @media(max-width: 1250px)
+          {
+            font-size: 2vw;
+            width: 4vw;
+            height: 4vw;
+          }
+          @media(max-width: 1050px)
+          {
+            width: 5vw;
+            height: 5vw;
+          }
+          @media(max-width: 720px)
+          {
+            width: 50px;
+            height: 50px;
+            font-size: 12px;
+          }
+        }
+      }
+
     }
   }
 }
 
-@keyframes animateExpand
+@keyframes animateExpandMobile
 {
   from {
     left: 100%;
@@ -96,11 +196,8 @@ $secondary-text: #000000;
   to {
     left: 0%;
     top: 0%;
-    @media(max-width: 720px)
-    {
-      width: 100%;
-      height: 100%;
-    }
+    width: 100%;
+    height: 100%;
     opacity: 1;
   }
 
@@ -109,7 +206,6 @@ $secondary-text: #000000;
 {
   .question-post-container
   {
-    // border: 4px solid $secondary-color;
   }
   .add-reply-post-btn-container
   {
@@ -119,13 +215,22 @@ $secondary-text: #000000;
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
+    margin-right: 5%;
+    button
+    {
+      border-radius: 50%;
+      border: none;
+      background-color: $secondary-color;
+      width: 5vw;
+      height: 5vw;
+      font-size: 2vw;
+    }
   }
 }
 .reply-post-list-container
 {
   .reply-post-container
   {
-    // border: 4px solid $secondary-color;
   }
 }
 .add-question-post-btn
@@ -138,7 +243,14 @@ $secondary-text: #000000;
     border-radius: 50%;
     border: none;
     background-color: $secondary-color;
-    width: 40px;
-    height: 40px;
+    width: 5vw;
+    height: 5vw;
+    font-size: 2vw;
+    @media(max-width: 720px)
+    {
+      font-size: 1em;
+      width: 40px;
+      height: 40px;
+    }
   }
 }

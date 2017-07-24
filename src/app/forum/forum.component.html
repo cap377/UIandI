@@ -13,37 +13,39 @@
 </div> -->
 <!--Modal to create posts-->
 <div *ngIf="modalContainer" class="forum-modal-container">
-  <div class="row post-name-container">
-    <div class="post-name-label col-xs-3">
-      Name:
+  <div class="row modal-row">
+    <div class="row post-name-container col-xs-12 col-md-12">
+      <div class="post-name-label col-xs-3 col-md-2">
+        Name:
+      </div>
+      <div class="post-name-input-container col-xs-9 col-md-10">
+        <input class="post-name-input" type="text" name="name" [(ngModel)]="name" placeholder="{{requiredInputText}}" />
+      </div>
     </div>
-    <div class="post-name-input-container col-xs-9">
-      <input class="post-name-input" type="text" name="name" [(ngModel)]="name" placeholder="{{requiredInputText}}" />
-    </div>
-  </div>
 
-  <div class="row post-response-container">
-    <div class="post-response-label col-xs-3">
-      {{postType}}:
+    <div class="row post-response-container col-xs-12 col-sm-> col-md-9">
+      <div class="post-response-label col-xs-3">
+        {{postType}}:
+      </div>
+      <div class="post-response-input-container col-xs-9">
+        <textarea class="post-response-input" [(ngModel)]="response" placeholder="{{requiredResponseText}}"></textarea>
+      </div>
     </div>
-    <div class="post-response-input-container col-xs-9">
-      <textarea class="post-response-input" [(ngModel)]="response" placeholder="{{requiredResponseText}}"></textarea>
-    </div>
-  </div>
-  <!--cancel and accept buttons-->
-  <div class="row post-button-container">
-    <div class="post-input-cancel-button-container col-xs-4">
-      <button (click)="closePostInputModal()">
-        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-      </button>
-    </div>
-    <div class="col-xs-4">
-
-    </div>
-    <div class="post-input-accept-button-container col-xs-4">
-      <button (click)="createPostFunction()">
-        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-      </button>
+    <!--cancel and accept buttons-->
+    <div class="row post-button-container col-xs-12 col-sm-3 col-md-3">
+      <div class="post-input-cancel-button-container col-xs-5 col-sm-12 col-md-12">
+        <button (click)="closePostInputModal()">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="col-xs-2 col-sm-12 col-md-12">
+        <br />
+      </div>
+      <div class="post-input-accept-button-container col-xs-5 col-sm-12 col-md-12">
+        <button (click)="createPostFunction()">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </div>
 </div>
