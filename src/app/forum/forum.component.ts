@@ -61,7 +61,8 @@ export class ForumComponent implements OnInit {
         name : tempName,
         response : tempResponse,
         replies : [],
-        timeStamp : formattedCurDate
+        timeStamp : formattedCurDate,
+        showReplies : true
       });
       this.modalContainer = false;
       this.name = "";
@@ -131,6 +132,10 @@ export class ForumComponent implements OnInit {
         this.requiredResponseText = "This is required reply information.";
       }
     }
+  }
+  showReplies(i: number)
+  {
+    this.questionList[i].showReplies = !this.questionList[i].showReplies;
   }
   getReplyPostInformation(i: number)
   {
