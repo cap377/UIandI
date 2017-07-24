@@ -1,7 +1,7 @@
 $darkColor: #243773;
 $lightColor: #B7BEFF;
 
-@keyframes user-info-animation-phone-down{
+@keyframes user-info-animation-down{
     from {
       height: 0px;
     }
@@ -10,18 +10,24 @@ $lightColor: #B7BEFF;
           height: 575px;
       }
       @media screen and (min-width: 720px) and (max-width: 1024px){
-        height: 600px;
+        height: 400px;
+      }
+      @media screen and (min-width: 992px){
+        height: 575px;
       }
     }
 }
 
-@keyframes user-info-animation-phone-up{
+@keyframes user-info-animation-up{
     from {
       @media screen and (max-width: 720px){
           height: 575px;
       }
       @media screen and (min-width: 720px) and (max-width: 1024px){
-        height: 600px;
+        height: 400px;
+      }
+      @media screen and (min-width: 992px){
+        height: 575px;
       }
     }
     to{
@@ -29,25 +35,17 @@ $lightColor: #B7BEFF;
     }
 }
 
-// @keyframes user-info-animation-tablet-down{
-//   from {
-//     height: 0px;
-//   }
-//   to{
-//     height: 800px;
-//   }
-// }
-//
-// @keyframes user-info-animation-tablet-up{
-//     from {
-//       height: 800px;
-//     }
-//     to{
-//       height: 0px;
-//     }
-// }
+@keyframes user-picture-move{
+  from{
+    left:125px;
+  }
+  to{
+    left:0px;
+  }
+}
 
 //phone screens----------------------------------------------------------------------------
+
 @media screen and (max-width: 720px) {
   //this is the container that shows the user picture and background pic
   .user-profile-container {
@@ -68,6 +66,7 @@ $lightColor: #B7BEFF;
 
   .user-profile-name-text {
     position: relative;
+    text-shadow: 4px 4px 2px $darkColor;
     z-index: 6;
     top: 50px;
     left: 40vw;
@@ -150,7 +149,7 @@ $lightColor: #B7BEFF;
     width: 100vw;
     background-color: transparent;
     display:block;
-    animation: user-info-animation-phone-down .6s;
+    animation: user-info-animation-down .6s;
     text-align: center;
     font-size: 2rem;
 
@@ -207,7 +206,7 @@ $lightColor: #B7BEFF;
 }
 
 //tablets------------------------------------------------------------------------------------------
-@media screen and (min-width: 720px) and (max-width: 1024px) {
+@media screen and (min-width: 720px) and (max-width: 992px) {
   //this is the container that shows the user picture and background pic
   .user-profile-container {
     background-color: transparent;
@@ -215,20 +214,22 @@ $lightColor: #B7BEFF;
   }
 
   .user-profile-badge-title img{
-    width: 100vw;
-    height: 100px;
+    width: 95vw;
+    height: 80px;
     position: relative;
     z-index: 5;
-    //margin-left: -5vw;
-    padding-top: 10px;
-    margin-bottom: -67px;
+    margin-left: 2vw;
+    margin-bottom: -80px;
+    //viewbox: 0 0 1000px 1000px;
+    //fill: $lightColor;
   }
 
   .user-profile-name-text {
     position: relative;
+    text-shadow: 4px 4px 2px $darkColor;
     z-index: 6;
-    top: 100px;
-    left: 40vw;
+    top: 75px;
+    left: 50vw;
     font-weight:bold;
     font-size: 4rem;
     color: white;
@@ -238,17 +239,18 @@ $lightColor: #B7BEFF;
   .user-profile-job-title-text{
     position: relative;
     text-align: center;
+    //left: 40vw;
     bottom: 0px;
     z-index: 6;
     font-weight: bold;
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .user-profile-badge {
     height: 250px;
     width: 100vw;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
     z-index: 4;
     position: relative;
     background-color: transparent;
@@ -257,130 +259,12 @@ $lightColor: #B7BEFF;
 
   .user-profile-img-container img {
     opacity: 1;
-    height: 240px;
-    width: 340px;
+    height: 170px;
+    width: 230px;
     position: absolute;
     //left: 32%;
-    top: 10px;
+    top: 30px;
     border-radius: 0px 0px 0px 100px;
-    //vertical-align: center;
-    //border: 2px solid $darkColor;
-    //box-shadow: 3px 3px 30px grey;
-    //order: 1px solid $lightColor;
-    // :hover{
-    //   animation-name: user-picture-move;
-    //   animation-duration: 1s;
-    // }
-    z-index: 1;
-  }
-
-  .user-profile-background-img-container img {
-    height: 250px;
-    width: 100vw;
-    position: absolute;
-    background-color: transparent;
-    border-radius: 100px;
-    //border-top: 1px solid $darkColor;
-    //border-bottom: 5px solid $darkColor;
-    //box-shadow: 1px 1px $lightColor;
-    top: 0;
-    left: 0;
-  }
-
-  .user-profile-dropdown-button{
-    position: absolute;
-    background-color: transparent;
-    color: $lightColor;
-    border: none;
-    outline: none;
-    padding: 10px;
-    top: 180px;
-    left: 85vw;
-    font-size: 5rem;
-  }
-
-  //this is for the dropdown of that shows the person bio
-  .user-profile-information-container {
-    z-index: -1;
-    margin-top: 0px;
-    height: 600px;
-    width: 100vw;
-    background-color: transparent;
-    display:block;
-    animation: user-info-animation-phone .8s;
-    text-align: center;
-    font-size: 3rem;
-
-    .user-profile-information-contact{
-      font-size: 2.2rem;
-      font-weight: bold;
-      font-style: oblique;
-      border-radius: 50px;
-      border-top: .5px solid $lightColor;
-      padding-top: 5px;
-      margin-bottom: 10px;
-    }
-
-    .user-profile-information-name {}
-
-    .user-profile-information-phone {}
-
-    .user-profile-information-email {
-      margin-bottom: 20px;
-    }
-
-    .user-profile-information-city {}
-
-    .user-profile-information-bio {
-      padding-bottom: 5px;
-    }
-  }
-}
-//pcs
-@media screen and (min-width: 1024px) {
-  //this is the container that shows the user picture and background pic
-  .user-profile-container {
-    background-color: transparent;
-    overflow: hidden;
-  }
-
-  .user-profile-badge-title img{
-    width: 108vw;
-    height:75px;
-    position: relative;
-    z-index: 5;
-    margin-left: -3vw;
-    margin-bottom: -50px;
-  }
-
-  .user-profile-name-text {
-      position: relative;
-      text-align: center;
-      //left: 40vw;
-      bottom: 0px;
-      z-index: 6;
-      font-weight: bold;
-      color: white;
-  }
-
-  .user-profile-badge {
-    height: 125px;
-    width: 100vw;
-    margin-bottom: 30px;
-    z-index: 4;
-    position: relative;
-    background-color: transparent;
-    display: block;
-  }
-
-  .user-profile-img-container img {
-    opacity: 1;
-    height: 120px;
-    width: 170px;
-    position: absolute;
-    //left: 32%;
-    top: 5px;
-    border-radius: 0px 0px 0px 62px;
     vertical-align: center;
     //border: 2px solid $darkColor;
     //box-shadow: 3px 3px 30px grey;
@@ -393,7 +277,7 @@ $lightColor: #B7BEFF;
   }
 
   .user-profile-background-img-container img {
-    height: 125px;
+    height: 200px;
     width: 100vw;
     position: absolute;
     background-color: transparent;
@@ -412,29 +296,241 @@ $lightColor: #B7BEFF;
     border: none;
     outline: none;
     padding: 10px;
-    top: 90px;
-    left: 80vw;
+    top: 160px;
+    left: 87vw;
     font-size: 25px;
   }
 
   //this is for the dropdown of that shows the person bio
   .user-profile-information-container {
+    //position:relative;
     z-index: -1;
     margin-top: 0px;
-    height: 500px;
+    height: 400px;
     width: 100vw;
     background-color: transparent;
     display:block;
-    animation: user-info-animation-phone .8s;
+    animation: user-info-animation-down .6s;
     text-align: center;
-    font-size: 20px;
+    font-size: 2rem;
+
+    .user-profile-information-border{
+      //  border-radius: 1000px;
+      //  border-top: .5px solid $lightColor;
+      //padding: 0px 110px;
+    }
+
+    .user-profile-information-title{
+      height: 50px;
+      width: 100vw;
+    }
+
+      .user-profile-information-title img{
+        z-index: 5;
+        position:relative;
+        height: 50px;
+        width: 50vw;
+        //bottom: -60px;
+      }
+
+      .user-profile-information-title-text{
+        z-index: 6;
+        position:relative;
+        font-size: 2.2rem;
+        font-weight: bold;
+        font-style: oblique;
+        border-radius: 1000px;
+        border-top: .5px solid $lightColor;
+        padding-top: 20px;
+        bottom: 60px;
+        //margin-bottom: 20px;
+        text-decoration: underline;
+      }
+
 
     .user-profile-information-name {}
 
-    .user-profile-information-phone {}
+    .user-profile-information-phone {
+      margin-top: 10px;
+    }
 
-    .user-profile-information-email {}
+    .user-profile-information-email {
+      margin-bottom: 20px;
+    }
 
-    .user-profile-information-bio {}
+    .user-profile-information-city {}
+
+    .user-profile-information-bio {
+      margin-top: 10px;
+      padding-bottom: 5px;
+    }
+  }
+}
+//pcs----------------------------------------------------------------
+@media screen and (min-width: 992px) {
+  .user-profile{
+    margin: auto;
+    max-width: 970px;
+    //display:flex;
+  }
+
+  //this is the container that shows the user picture and background pic
+  .user-profile-container {
+    background-color: transparent;
+    overflow: hidden;
+    //flex:6;
+
+  }
+  .user-profile-badge-title{
+    width: 420px;
+    height: 125px;
+    margin-bottom: 20px;
+  }
+
+  .user-profile-badge-title img{
+    width: 425px;
+    height: 120px;
+    position: relative;
+    z-index: 5;
+    top:30px;
+    //bottom: px;
+    //viewbox: 0 0 1000px 1000px;
+    //fill: $lightColor;
+  }
+
+  .user-profile-name-text {
+    position: relative;
+    text-shadow: 4px 4px 2px $darkColor;
+    z-index: 6;
+    top: 75px;
+    left: 160px;
+    top: 50px;
+    font-weight:bold;
+    font-size: 2.8rem;
+    color: white;
+    //opacity: 0;
+  }
+
+  .user-profile-job-title-text{
+    position: relative;
+    text-align: center;
+    //right: 5px;
+    bottom: 80px;
+    z-index: 6;
+    font-weight: bold;
+    color: white;
+    font-size: 3.2rem;
+  }
+
+  .user-profile-badge {
+    height: 175px;
+    width: 425px;
+    //margin-bottom: 30px;
+    z-index: 4;
+    position: relative;
+    background-color: transparent;
+    display: block;
+  }
+
+  .user-profile-img-container img {
+    opacity: 1;
+    height: 120px;
+    width: 180px;
+    position: absolute;
+    //left: 32%;
+    top: 30px;
+    //left: 125px;
+    border-radius: 0px 0px 0px 75px;
+
+  }
+
+  .user-profile-background-img-container img {
+    height: 150px;
+    width: 425px;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 100px;
+    //border-top: 1px solid $darkColor;
+    //border-bottom: 5px solid $darkColor;
+    //box-shadow: 1px 1px $lightColor;
+    top: 0;
+    left: 0;
+  }
+
+  .user-profile-dropdown-button{
+    position: absolute;
+    background-color: transparent;
+    color: $lightColor;
+    border: none;
+    outline: none;
+    padding: 10px;
+    top: 110px;
+    left: 350px;
+    font-size: 25px;
+  }
+
+  //this is for the dropdown of that shows the person bio
+  .user-profile-information-container {
+    //position:relative;
+    z-index: -1;
+    margin-top: 0px;
+    height: 600px;
+    width: 400px;
+    background-color: transparent;
+    display:block;
+    animation: user-info-animation-down .6s;
+    text-align: center;
+    font-size: 2rem;
+
+    .user-profile-information-border{
+      //  border-radius: 1000px;
+      //  border-top: .5px solid $lightColor;
+      //padding: 0px 110px;
+    }
+
+    .user-profile-information-title{
+      height: 50px;
+      width: 400px;
+    }
+
+      .user-profile-information-title img{
+        z-index: 5;
+        position:relative;
+        height: 50px;
+        width: 200px;
+        //bottom: -60px;
+      }
+
+      .user-profile-information-title-text{
+        z-index: 6;
+        position:relative;
+        font-size: 2.2rem;
+        font-weight: bold;
+        font-style: oblique;
+        border-radius: 1000px;
+        border-top: .5px solid $lightColor;
+        padding-top: 20px;
+        bottom: 60px;
+        //margin-bottom: 20px;
+        text-decoration: underline;
+      }
+
+
+    .user-profile-information-name {}
+
+    .user-profile-information-phone {
+      margin-top: 10px;
+    }
+
+    .user-profile-information-email {
+      margin-bottom: 20px;
+    }
+
+    .user-profile-information-city {}
+
+    .user-profile-information-bio {
+      margin-top: 10px;
+      padding-bottom: 5px;
+    }
   }
 }
