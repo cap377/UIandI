@@ -3,12 +3,18 @@ $primary-text: #FFFFFF;
 $secondary-color: #B7BEFF;
 $secondary-text: #000000;
 
-.post-container
+.post-img-container
 {
-  margin: 5% 10% 5% 10%;
-  background-color: $secondary-color;
-  .post-response-field
+  background: url('../../assets/bannerLight.png');
+  background-size: cover;
+  background-position: left;
+  .post-container
   {
-    margin: 5% 0% 5% 10%;
+    margin: 5% 10% 5% 10%;
+
+    .post-response-field
+    {
+      margin: 5% 0% 5% 10%;
+    }
   }
 }
