@@ -3,6 +3,14 @@ $primary-text: #FFFFFF;
 $secondary-color: #B7BEFF;
 $secondary-text: #000000;
 
+@media (max-width: 1023px){
+  p, li {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+  }
+}
 .home-section-title {
   width: 100%;
   padding: 0;
@@ -123,17 +131,20 @@ $secondary-text: #000000;
     padding-right: 0;
     padding-top: 5px;
   }
-  @media (max-width: 1024px) {
-    display: none;
-  }
 }
 .home-apply-button {
-  padding: 2px;
-  color: $primary-color;
+  padding: 4px;
+  color: $primary-text;
   border: solid $primary-color 1px;
   border-radius: 3px;
   float: right;
-  background-color: white;
+  background-color: $primary-color;
+  &:hover {
+    background-color: $primary-text;
+    color: $primary-color;
+    text-decoration: none;
+    transition: 0.25s;
+  }
 }
 
 @media (min-width: 721px) {}

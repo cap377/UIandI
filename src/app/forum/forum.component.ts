@@ -14,6 +14,9 @@ export class ForumComponent implements OnInit {
   name:string;
   response: string;
 
+  requiredInputText:string = "";
+  requiredResponseText:string = "";
+
   //used to display label for response in modal
   postType: string;
 
@@ -30,32 +33,104 @@ export class ForumComponent implements OnInit {
   {
     let tempName = this.name;
     let tempResponse = this.response;
-    this.name = "";
-    this.response = "";
-    let curTime = new Date();
-    //alert(curTime);
-    //let tempTimeStamp =
-    this.questionList.push({
-      name : tempName,
-      response : tempResponse,
-      replies : [],
-      timeStamp : curTime
-    });
-    this.modalContainer = false;
+
+    let curDate = new Date();
+
+    let formattedCurDate = 'sent ' + (curDate.getMonth()+1) + '/' + curDate.getDate() + '/' + curDate.getFullYear() + ' at ';
+    let curHour = curDate.getHours();
+    let meridiem = 'AM';
+    if(curHour == 0)
+    {
+      curHour = 12;
+    }
+    else if(curHour == 12)
+    {
+      meridiem = 'PM';
+    }
+    else if(curHour > 12)
+    {
+      curHour -= 12;
+      meridiem = 'PM';
+    }
+    let curTime = curHour + ":" + curDate.getMinutes() + " " + meridiem;
+    formattedCurDate += curTime;
+
+    if(tempName && tempResponse)
+    {
+      this.questionList.push({
+        name : tempName,
+        response : tempResponse,
+        replies : [],
+        timeStamp : formattedCurDate
+      });
+      this.modalContainer = false;
+      this.name = "";
+      this.response = "";
+      this.requiredInputText = "";
+      this.requiredResponseText = "";
+    }
+    else
+    {
+      if(!tempName)
+      {
+        this.requiredInputText = "This is required question information.";
+      }
+      if(!tempResponse)
+      {
+        this.requiredResponseText = "This is required question information.";
+      }
+    }
   }
   addReplyPost()
   {
     let tempName = this.name;
     let tempResponse = this.response;
-    this.name = "";
-    this.response = "";
-    let curTime = new Date();
-    this.questionList[this.currentReplyIndex].replies.push({
-      name : tempName,
-      response : tempResponse,
-      timeStamp : curTime
-    });
-    this.modalContainer = false;
+
+    let curDate = new Date();
+
+    let formattedCurDate = 'sent ' + (curDate.getMonth()+1) + '/' + curDate.getDate() + '/' + curDate.getFullYear() + ' at ';
+    let curHour = curDate.getHours();
+    let meridiem = 'AM';
+    if(curHour == 0)
+    {
+      curHour = 12;
+    }
+    else if(curHour == 12)
+    {
+      meridiem = 'PM';
+    }
+    else if(curHour > 12)
+    {
+      curHour -= 12;
+      meridiem = 'PM';
+    }
+    let curTime = curHour + ":" + curDate.getMinutes() + " " + meridiem;
+    formattedCurDate += curTime;
+
+    if(tempName && tempResponse)
+    {
+      this.questionList[this.currentReplyIndex].replies.push({
+        name : tempName,
+        response : tempResponse,
+        timeStamp : formattedCurDate
+      });
+      this.modalContainer = false;
+      this.name = "";
+      this.response = "";
+      this.requiredInputText = "";
+      this.requiredResponseText = "";
+    }
+    else
+    {
+      if(!tempName)
+      {
+        this.requiredInputText = "This is required reply information.";
+      }
+      if(!tempResponse)
+      {
+        this.requiredResponseText = "This is required reply information.";
+      }
+    }
   }
   getReplyPostInformation(i: number)
   {
